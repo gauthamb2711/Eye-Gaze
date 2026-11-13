@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-canvas: #F5F4FA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-muted: #ECEAF6;
+  --bg-navy: #111834;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --border-hairline: #E2E0F0;
+  --accent-violet: #6D28D9;
+  --accent-cyan: #0891B2;
+}
+
+html.high-contrast {
+  --bg-canvas: #FFFFFF;
+  --bg-surface: #FFFFFF;
+  --bg-surface-muted: #F1F5F9;
+  --bg-navy: #020617;
+  --text-primary: #000000;
+  --text-secondary: #1E293B;
+  --border-hairline: #0F172A;
+  --accent-violet: #4C1D95;
+  --accent-cyan: #0E7490;
+}
+
+html.font-large {
+  font-size: 17px;
+}
+
+html.font-xl {
+  font-size: 19px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+html.high-contrast .border-hairline {
+  border-color: #0F172A !important;
+  border-width: 2px !important;
+}
+
+@keyframes fan-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fan-spin {
+  animation: fan-spin var(--fan-duration, 1.2s) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fan-spin {
+    animation-duration: 6s;
+  }
+}

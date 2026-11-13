@@ -1,0 +1,6 @@
+{
+  "name": "GazeHome",
+  "description": "AI-Based Eye-Gaze Controlled Smart Home Automation System using real-time MediaPipe facial and iris landmark tracking, machine learning calibration, blink gesture recognition, and an interactive smart home simulator.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
